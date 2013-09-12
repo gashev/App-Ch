@@ -1,5 +1,8 @@
+package App::Ch;
+
 use strict;
 use warnings;
-package App::Ch;
+
+use App::Cmd::Setup -app;
 
 1;
