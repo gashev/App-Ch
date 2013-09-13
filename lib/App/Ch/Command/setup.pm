@@ -39,6 +39,8 @@ sub execute {
     my $name = $opt->name;
 
     exec("/usr/sbin/debootstrap --arch $arch $distribution /opt/chroot/$name $mirror");
+    exec("cp /etc/hosts /opt/chroot/$name/etc/hosts");
+    exec("cp /proc/mounts /opt/chroot/$name/etc/mtab");
 }
 
 1;
