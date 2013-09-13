@@ -15,6 +15,11 @@ sub opt_spec {
 
 sub execute {
     my ($self, $opt, $args) = @_;
+
+    my $name = $opt->name;
+
+    $self->command("umount /opt/chroot/$name/proc");
+    $self->command("umount /opt/chroot/$name/sys");
 }
 
 1;
