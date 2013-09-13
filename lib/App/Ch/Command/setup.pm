@@ -1,3 +1,4 @@
+# ABSTRACT: bootstrap a basic system
 package App::Ch::Command::setup;
 
 use strict;

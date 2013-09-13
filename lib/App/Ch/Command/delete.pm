@@ -1,3 +1,4 @@
+# ABSTRACT: permanently remove a chroot
 package App::Ch::Command::delete;
 
 use strict;
