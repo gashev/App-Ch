@@ -4,7 +4,7 @@ package App::Ch::Command::init;
 use strict;
 use warnings;
 
-use App::Ch -command;
+use base 'App::Ch::Command';
 
 sub opt_spec {
     return (

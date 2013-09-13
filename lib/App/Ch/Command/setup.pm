@@ -4,7 +4,7 @@ package App::Ch::Command::setup;
 use strict;
 use warnings;
 
-use App::Ch -command;
+use base 'App::Ch::Command';
 
 sub opt_spec {
     return (
@@ -38,9 +38,9 @@ sub execute {
     my $mirror = $opt->mirror;
     my $name = $opt->name;
 
-    exec("/usr/sbin/debootstrap --arch $arch $distribution /opt/chroot/$name $mirror");
-    exec("cp /etc/hosts /opt/chroot/$name/etc/hosts");
-    exec("cp /proc/mounts /opt/chroot/$name/etc/mtab");
+    $self->command("/usr/sbin/debootstrap --arch $arch $distribution /opt/chroot/$name $mirror");
+    $self->command("cp /etc/hosts /opt/chroot/$name/etc/hosts");
+    $self->command("cp /proc/mounts /opt/chroot/$name/etc/mtab");
 }
 
 1;
