@@ -23,10 +23,6 @@ sub opt_spec {
             'mirror location [http://ftp.us.debian.org/debian]',
             { default => 'http://ftp.us.debian.org/debian' }
         ],
-        [
-            'name=s',
-            'name'
-        ]
     );
 }
 
@@ -36,7 +32,7 @@ sub execute {
     my $arch = $opt->arch;
     my $distribution = $opt->distribution;
     my $mirror = $opt->mirror;
-    my $name = $opt->name;
+    my $name = ${$args}[0];
 
     $self->command("/usr/sbin/debootstrap --arch $arch $distribution /opt/chroot/$name $mirror");
     $self->command("cp /etc/hosts /opt/chroot/$name/etc/hosts");

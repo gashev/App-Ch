@@ -6,17 +6,10 @@ use warnings;
 
 use base 'App::Ch::Command';
 
-sub opt_spec {
-    return (
-        [
-        ]
-    );
-}
-
 sub execute {
     my ($self, $opt, $args) = @_;
 
-    my $name = $opt->name;
+    my $name = ${$args}[0];
 
     $self->command("umount /opt/chroot/$name/proc");
     $self->command("umount /opt/chroot/$name/sys");

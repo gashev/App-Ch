@@ -6,19 +6,10 @@ use warnings;
 
 use base 'App::Ch::Command';
 
-sub opt_spec {
-    return (
-        [
-            'name=s',
-            'name'
-        ]
-    );
-}
-
 sub execute {
     my ($self, $opt, $args) = @_;
 
-    my $name = $opt->name;
+    my $name = ${$args}[0];
 
     $self->command("mount proc /opt/chroot/$name/proc -t proc");
     $self->command("mount sysfs /opt/chroot/$name/sys -t sysfs");
