@@ -6,15 +6,12 @@ use warnings;
 
 use base 'App::Ch::Command';
 
-sub opt_spec {
-    return (
-        [
-        ]
-    );
-}
-
 sub execute {
     my ($self, $opt, $args) = @_;
+
+    my $root = $self->get_root();
+
+    $self->command("ls -1 $root");
 }
 
 1;
