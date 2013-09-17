@@ -9,10 +9,11 @@ use base 'App::Ch::Command';
 sub execute {
     my ($self, $opt, $args) = @_;
 
+    my $root = $self->get_root();
     my $name = ${$args}[0];
 
-    $self->command("umount /opt/chroot/$name/proc");
-    $self->command("umount /opt/chroot/$name/sys");
+    $self->command("umount $root/$name/proc");
+    $self->command("umount $root/$name/sys");
 }
 
 1;

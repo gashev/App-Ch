@@ -10,9 +10,10 @@ use base 'App::Ch::Command';
 sub execute {
     my ($self, $opt, $args) = @_;
 
+    my $root = $self->get_root();
     my $name = ${$args}[0];
 
-    $self->command("rm -rf /opt/chroot/$name");
+    $self->command("rm -rf $root/$name");
 }
 
 1;

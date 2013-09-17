@@ -9,10 +9,11 @@ use base 'App::Ch::Command';
 sub execute {
     my ($self, $opt, $args) = @_;
 
+    my $root = $self->get_root();
     my $name = ${$args}[0];
 
-    $self->command("mount proc /opt/chroot/$name/proc -t proc");
-    $self->command("mount sysfs /opt/chroot/$name/sys -t sysfs");
+    $self->command("mount proc $root/$name/proc -t proc");
+    $self->command("mount sysfs $root/$name/sys -t sysfs");
 }
 
 1;

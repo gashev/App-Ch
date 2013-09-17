@@ -14,6 +14,17 @@ sub command {
     exec($command) or print STDERR "couldn't exec $command: $!";
 }
 
+sub get_root {
+    my $self = shift;
+
+    my $global_opts = $self->app->global_options;
+
+    $global_opts->{root} ||= $ENV{CH_REPOSITORY_ROOT}
+        || die "Must specify a repository root directory.\n";
+
+    return $global_opts->{root};
+}
+
 1;
 
 __END__
