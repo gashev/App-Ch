@@ -9,7 +9,7 @@ use base 'App::Ch::Command';
 our $VERSION = '0.1';
 
 sub execute {
-    my ($self, $opt, $args) = @_;
+    my ( $self, $opt, $args ) = @_;
 
     my $root = $self->get_root();
 

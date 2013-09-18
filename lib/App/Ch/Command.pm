@@ -20,7 +20,7 @@ sub get_root {
     my $global_opts = $self->app->global_options;
 
     $global_opts->{root} ||= $ENV{CH_REPOSITORY_ROOT}
-        || die "Error: Must specify a repository root directory.\n";
+      || die "Error: Must specify a repository root directory.\n";
 
     return $global_opts->{root};
 }

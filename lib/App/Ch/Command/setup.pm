@@ -17,7 +17,7 @@ sub opt_spec {
         ],
         [
             'distribution=s',
-            'distribution [sid|experimental|...]' ,
+            'distribution [sid|experimental|...]',
             { default => 'sid' }
         ],
         [
@@ -39,13 +39,14 @@ sub validate_args {
 sub execute {
     my ( $self, $opt, $args ) = @_;
 
-    my $root = $self->get_root();
-    my $arch = $opt->arch;
+    my $root         = $self->get_root();
+    my $arch         = $opt->arch;
     my $distribution = $opt->distribution;
-    my $mirror = $opt->mirror;
-    my $name = ${$args}[0];
+    my $mirror       = $opt->mirror;
+    my $name         = ${$args}[0];
 
-    $self->command("/usr/sbin/debootstrap --arch $arch $distribution $root/$name $mirror");
+    $self->command(
+        "/usr/sbin/debootstrap --arch $arch $distribution $root/$name $mirror");
     $self->command("cp /etc/hosts $root/$name/etc/hosts");
     $self->command("cp /proc/mounts $root/$name/etc/mtab");
 }
