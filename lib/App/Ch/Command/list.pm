@@ -6,6 +6,8 @@ use warnings;
 
 use base 'App::Ch::Command';
 
+our $VERSION = '0.1';
+
 sub execute {
     my ($self, $opt, $args) = @_;
 

@@ -7,8 +7,10 @@ use utf8;
 
 use base 'App::Ch::Command';
 
+our $VERSION = '0.1';
+
 sub validate_args {
-    my ($self, $opt, $args) = @_;
+    my ( $self, $opt, $args ) = @_;
 
     $self->check_chroot_name_argument($args);
 
@@ -16,7 +18,7 @@ sub validate_args {
 }
 
 sub execute {
-    my ($self, $opt, $args) = @_;
+    my ( $self, $opt, $args ) = @_;
 
     my $root = $self->get_root();
     my $name = ${$args}[0];

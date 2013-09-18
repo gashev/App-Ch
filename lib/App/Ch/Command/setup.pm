@@ -6,6 +6,8 @@ use warnings;
 
 use base 'App::Ch::Command';
 
+our $VERSION = '0.1';
+
 sub opt_spec {
     return (
         [
@@ -27,7 +29,7 @@ sub opt_spec {
 }
 
 sub validate_args {
-    my ($self, $opt, $args) = @_;
+    my ( $self, $opt, $args ) = @_;
 
     $self->check_chroot_name_argument($args);
 
@@ -35,7 +37,7 @@ sub validate_args {
 }
 
 sub execute {
-    my ($self, $opt, $args) = @_;
+    my ( $self, $opt, $args ) = @_;
 
     my $root = $self->get_root();
     my $arch = $opt->arch;

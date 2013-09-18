@@ -5,6 +5,8 @@ use warnings;
 
 use App::Ch;
 
+our $VERSION = '0.1';
+
 App::Ch->run;
 
 

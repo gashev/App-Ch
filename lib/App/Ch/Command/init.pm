@@ -6,6 +6,8 @@ use warnings;
 
 use base 'App::Ch::Command';
 
+our $VERSION = '0.1';
+
 sub opt_spec {
     return (
         [
@@ -14,7 +16,7 @@ sub opt_spec {
 }
 
 sub execute {
-    my ($self, $opt, $args) = @_;
+    my ( $self, $opt, $args ) = @_;
 }
 
 1;

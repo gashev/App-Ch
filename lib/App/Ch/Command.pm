@@ -6,10 +6,10 @@ use utf8;
 
 use App::Cmd::Setup -command;
 
-our $VERSION = '0.1'; # VERSION
+our $VERSION = '0.1';
 
 sub command {
-    my ($self, $command) = @_;
+    my ( $self, $command ) = @_;
 
     exec($command) or print STDERR "couldn't exec $command: $!";
 }
@@ -26,7 +26,7 @@ sub get_root {
 }
 
 sub check_chroot_name_argument {
-    my ($self, $args) = @_;
+    my ( $self, $args ) = @_;
 
     $self->usage_error('Must specify chroot name.') if @{$args} != 1;
 
