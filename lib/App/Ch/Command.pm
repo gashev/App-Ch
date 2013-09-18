@@ -25,6 +25,14 @@ sub get_root {
     return $global_opts->{root};
 }
 
+sub check_chroot_name_argument {
+    my ($self, $args) = @_;
+
+    $self->usage_error('Must specify chroot name.') if @{$args} != 1;
+
+    return 1;
+}
+
 1;
 
 __END__

@@ -6,11 +6,12 @@ use warnings;
 
 use base 'App::Ch::Command';
 
-sub opt_spec {
-    return (
-        [
-        ]
-    );
+sub validate_args {
+    my ($self, $opt, $args) = @_;
+
+    $self->check_chroot_name_argument($args);
+
+    return 1;
 }
 
 sub execute {

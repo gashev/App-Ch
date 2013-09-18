@@ -29,12 +29,10 @@ sub opt_spec {
 sub validate_args {
     my ($self, $opt, $args) = @_;
 
-    $self->usage_error('Must specify chroot name.') if @{$args} != 1;
+    $self->check_chroot_name_argument($args);
 
     return 1;
-
 }
-
 
 sub execute {
     my ($self, $opt, $args) = @_;

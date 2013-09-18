@@ -6,6 +6,14 @@ use warnings;
 
 use base 'App::Ch::Command';
 
+sub validate_args {
+    my ($self, $opt, $args) = @_;
+
+    $self->check_chroot_name_argument($args);
+
+    return 1;
+}
+
 sub execute {
     my ($self, $opt, $args) = @_;
 
