@@ -7,7 +7,7 @@ use warnings;
 
 use App::Cmd::Setup -app;
 
-our $VERSION = '0.1';
+# VERSION
 
 sub global_opt_spec {
     [ 'root|r=s' => 'Path to your repository root directory' ];

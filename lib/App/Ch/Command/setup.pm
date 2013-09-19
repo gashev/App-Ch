@@ -6,7 +6,7 @@ use warnings;
 
 use base 'App::Ch::Command';
 
-our $VERSION = '0.1';
+# VERSION
 
 sub opt_spec {
     return (

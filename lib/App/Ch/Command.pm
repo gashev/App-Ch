@@ -6,7 +6,7 @@ use utf8;
 
 use App::Cmd::Setup -command;
 
-our $VERSION = '0.1';
+# VERSION
 
 sub command {
     my ( $self, $command ) = @_;
@@ -44,10 +44,6 @@ __END__
 =head1 NAME
 
 App::Ch::Command - Base class for ch commands
-
-=head1 VERSION
-
-version 0.1
 
 =head1 AUTHOR
 

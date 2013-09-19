@@ -7,7 +7,7 @@ use utf8;
 
 use base 'App::Ch::Command';
 
-our $VERSION = '0.1';
+# VERSION
 
 sub validate_args {
     my ( $self, $opt, $args ) = @_;
