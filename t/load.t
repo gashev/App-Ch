@@ -1,6 +1,6 @@
 #!perl
 
-use Test::More tests => 10;
+use Test::More tests => 12;
 
 BEGIN {
     use_ok('App::Ch');
@@ -13,6 +13,8 @@ BEGIN {
     use_ok('App::Ch::Command::setup');
     use_ok('App::Ch::Command::start');
     use_ok('App::Ch::Command::stop');
+    use_ok('App::Ch::Mount');
+    use_ok('App::Ch::Worker');
 }
 
 diag("Testing App::Ch $App::Ch::VERSION");
