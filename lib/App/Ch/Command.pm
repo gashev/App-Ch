@@ -12,9 +12,7 @@ use IPC::System::Simple qw(run);
 sub command {
     my ( $self, $command ) = @_;
 
-    eval {
-        run($command);
-    };
+    eval { run($command); };
 }
 
 sub get_root {
