@@ -22,6 +22,7 @@ sub execute {
     my $root = $self->get_root();
     my $name = ${$args}[0];
 
+    $self->command("umount $root/$name/dev/pts");
     $self->command("umount $root/$name/proc");
     $self->command("umount $root/$name/sys");
 }
