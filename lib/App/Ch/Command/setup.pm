@@ -48,6 +48,7 @@ sub execute {
     $self->command(
         "/usr/sbin/debootstrap --arch $arch $distribution $root/$name $mirror");
     $self->command("cp /etc/hosts $root/$name/etc/hosts");
+    $self->command("cp /etc/resolv.conf $root/$name/etc/resolv.conf");
     $self->command("cp /proc/mounts $root/$name/etc/mtab");
 }
 
