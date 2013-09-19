@@ -13,7 +13,7 @@ sub execute {
 
     my $root = $self->get_root();
 
-    $self->command("ls -1 $root");
+    $self->worker()->run("ls -1 $root");
 }
 
 1;

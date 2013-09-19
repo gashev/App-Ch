@@ -6,6 +6,8 @@ use warnings;
 
 use base 'App::Ch::Command';
 
+use App::Ch::Mount;
+
 # VERSION
 
 sub validate_args {
@@ -21,10 +23,9 @@ sub execute {
 
     my $root = $self->get_root();
     my $name = ${$args}[0];
+    my $mount = App::Ch::Mount->new();
 
-    $self->command("mount pts $root/$name/dev/pts -t devpts");
-    $self->command("mount proc $root/$name/proc -t proc");
-    $self->command("mount sysfs $root/$name/sys -t sysfs");
+    $mount->mountChroot($root, $name);
 }
 
 1;

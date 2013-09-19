@@ -23,7 +23,7 @@ sub execute {
     my $root = $self->get_root();
     my $name = ${$args}[0];
 
-    $self->command("rm -rf $root/$name");
+    $self->worker()->run("rm -rf $root/$name");
 }
 
 1;

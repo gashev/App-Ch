@@ -5,14 +5,12 @@ use warnings;
 use utf8;
 
 use App::Cmd::Setup -command;
-use IPC::System::Simple qw(run);
+use App::Ch::Worker;
 
 # VERSION
 
-sub command {
-    my ( $self, $command ) = @_;
-
-    eval { run($command); };
+sub worker {
+    return App::Ch::Worker->new();
 }
 
 sub get_root {

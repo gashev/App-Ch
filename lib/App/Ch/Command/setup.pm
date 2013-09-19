@@ -45,11 +45,11 @@ sub execute {
     my $mirror       = $opt->mirror;
     my $name         = ${$args}[0];
 
-    $self->command(
+    $self->worker()->run(
         "/usr/sbin/debootstrap --arch $arch $distribution $root/$name $mirror");
-    $self->command("cp /etc/hosts $root/$name/etc/hosts");
-    $self->command("cp /etc/resolv.conf $root/$name/etc/resolv.conf");
-    $self->command("cp /proc/mounts $root/$name/etc/mtab");
+    $self->worker()->run("cp /etc/hosts $root/$name/etc/hosts");
+    $self->worker()->run("cp /etc/resolv.conf $root/$name/etc/resolv.conf");
+    $self->worker()->run("cp /proc/mounts $root/$name/etc/mtab");
 }
 
 1;
