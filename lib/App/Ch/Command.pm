@@ -11,7 +11,7 @@ our $VERSION = '0.1';
 sub command {
     my ( $self, $command ) = @_;
 
-    exec($command) or print STDERR "couldn't exec $command: $!";
+    `$command`;
 }
 
 sub get_root {
