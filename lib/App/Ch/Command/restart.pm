@@ -18,6 +18,17 @@ sub validate_args {
 
 sub execute {
     my ( $self, $opt, $args ) = @_;
+
+    my $root = $self->get_root();
+    my $name = ${$args}[0];
+
+    $self->command("umount $root/$name/dev/pts");
+    $self->command("umount $root/$name/proc");
+    $self->command("umount $root/$name/sys");
+
+    $self->command("mount pts $root/$name/dev/pts -t devpts");
+    $self->command("mount proc $root/$name/proc -t proc");
+    $self->command("mount sysfs $root/$name/sys -t sysfs");
 }
 
 1;
