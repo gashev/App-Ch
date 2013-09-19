@@ -5,13 +5,16 @@ use warnings;
 use utf8;
 
 use App::Cmd::Setup -command;
+use IPC::System::Simple qw(run);
 
 # VERSION
 
 sub command {
     my ( $self, $command ) = @_;
 
-    `$command`;
+    eval {
+        run($command);
+    };
 }
 
 sub get_root {
