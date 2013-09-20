@@ -10,9 +10,13 @@ use YAML::Tiny;
 
 sub new {
     my ( $class, $root ) = @_;
+
+    my $configFile = "$root/.ch.yml";
+
     my $self = {
-        root => $root,
-        data => YAML::Tiny->read("$root/.ch.yml"),
+        root       => $root,
+        configFile => $configFile,
+        data       => YAML::Tiny->read($configFile),
     };
 
     bless $self, $class;
@@ -27,7 +31,7 @@ sub add {
         description  => $description,
     };
 
-    $self->{data}->write("$self->{root}/.ch.yml");
+    $self->{data}->write($self->{configFile});
 }
 
 sub delete {
@@ -35,7 +39,7 @@ sub delete {
 
     delete $self->{data}->[0]->{$name};
 
-    $self->{data}->write("$self->{root}/.ch.yml");
+    $self->{data}->write($self->{configFile});
 }
 
 sub list {
