@@ -1,6 +1,6 @@
 #!perl
 
-use Test::More tests => 12;
+use Test::More tests => 13;
 
 BEGIN {
     use_ok('App::Ch');
@@ -14,6 +14,7 @@ BEGIN {
     use_ok('App::Ch::Command::start');
     use_ok('App::Ch::Command::stop');
     use_ok('App::Ch::Mount');
+    use_ok('App::Ch::Repository');
     use_ok('App::Ch::Worker');
 }
 
