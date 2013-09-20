@@ -1,3 +1,4 @@
+# ABSTRACT: Base class for ch commands
 package App::Ch::Command;
 
 use strict;
