@@ -7,6 +7,8 @@ use utf8;
 
 use base 'App::Ch::Command';
 
+use App::Ch::Repository;
+
 # VERSION
 
 sub validate_args {
@@ -24,6 +26,9 @@ sub execute {
     my $name = ${$args}[0];
 
     $self->worker()->run("rm -rf $root/$name");
+
+    my $repository = App::Ch::Repository->new($root);
+    $repository->delete($name);
 }
 
 1;
