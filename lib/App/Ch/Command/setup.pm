@@ -3,6 +3,7 @@ package App::Ch::Command::setup;
 
 use strict;
 use warnings;
+use utf8;
 
 use base 'App::Ch::Command';
 

@@ -1,9 +1,9 @@
-package App::Ch;
-
 # ABSTRACT: Chroot handler
+package App::Ch;
 
 use strict;
 use warnings;
+use utf8;
 
 use App::Cmd::Setup -app;
 
