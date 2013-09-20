@@ -8,7 +8,6 @@ use utf8;
 use base 'App::Ch::Command';
 
 use App::Ch::Mount;
-use POSIX qw/strftime/;
 
 # VERSION
 
