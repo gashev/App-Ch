@@ -1,12 +1,11 @@
 #!perl
 
-use Test::More tests => 13;
+use Test::More tests => 12;
 
 BEGIN {
     use_ok('App::Ch');
     use_ok('App::Ch::Command');
     use_ok('App::Ch::Command::delete');
-    use_ok('App::Ch::Command::init');
     use_ok('App::Ch::Command::list');
     use_ok('App::Ch::Command::login');
     use_ok('App::Ch::Command::restart');
