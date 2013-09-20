@@ -43,7 +43,7 @@ sub list {
 
     for my $key (sort keys %{$self->{data}->[0]}) {
         print sprintf(
-            "%-10s\t%s\t%s\t%-50s\n",
+            "%-10s\t%-10s\t%s\t%-50s\n",
             $key,
             $self->{data}->[0]->{$key}{'distribution'},
             $self->{data}->[0]->{$key}{'date'},
