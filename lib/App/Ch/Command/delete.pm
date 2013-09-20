@@ -45,7 +45,9 @@ __END__
 
 =head1 DESCRIPTION
 
-This command permanently removes chroot from the repository.
+This command permanently removes chroot from the repository. Only use this
+after umount filesystems directly inside the chroot. For umount filesystems see
+stop command.
 
 =head1 COMMAND ARGUMENTS
 
