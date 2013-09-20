@@ -6,6 +6,8 @@ use warnings;
 
 use base 'App::Ch::Command';
 
+use App::Ch::Repository;
+
 # VERSION
 
 sub execute {
@@ -13,7 +15,8 @@ sub execute {
 
     my $root = $self->get_root();
 
-    $self->worker()->run("ls -1 $root");
+    my $repository = App::Ch::Repository->new($root);
+    $repository->list();
 }
 
 1;

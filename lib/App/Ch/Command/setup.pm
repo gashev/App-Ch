@@ -51,7 +51,7 @@ sub execute {
     my $arch         = $opt->arch;
     my $distribution = $opt->distribution;
     my $mirror       = $opt->mirror;
-    my $message      = $opt->message;
+    my $message      = defined $opt->message ? $opt->message : '';
     my $name         = ${$args}[0];
 
     $self->worker()->run(
@@ -61,7 +61,7 @@ sub execute {
     $self->worker()->run("cp /proc/mounts $root/$name/etc/mtab");
 
     my $repository = App::Ch::Repository->new($root);
-    $repository->add($name, 'debian', $localtime, $message);
+    $repository->add($name, $distribution, $localtime, $message);
 }
 
 1;
