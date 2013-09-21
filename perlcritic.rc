@@ -1,0 +1,4 @@
+severity = 1
+verbose  = 9
+
+exclude = Miscellanea::RequireRcsKeywords
