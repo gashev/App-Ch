@@ -23,7 +23,7 @@ sub execute {
     my $root = $self->get_root();
     my $name = ${$args}[0];
 
-    $self->worker()->run("chroot $root/$name");
+    return $self->worker()->run("chroot $root/$name");
 }
 
 1;

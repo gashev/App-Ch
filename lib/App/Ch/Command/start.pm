@@ -26,7 +26,7 @@ sub execute {
     my $name = ${$args}[0];
     my $mount = App::Ch::Mount->new();
 
-    $mount->mountChroot($root, $name);
+    return $mount->mountChroot($root, $name);
 }
 
 1;

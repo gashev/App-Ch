@@ -31,7 +31,7 @@ sub add {
         description  => $description,
     };
 
-    $self->{data}->write($self->{configFile});
+    return $self->{data}->write($self->{configFile});
 }
 
 sub delete {
@@ -39,7 +39,7 @@ sub delete {
 
     delete $self->{data}->[0]->{$name};
 
-    $self->{data}->write($self->{configFile});
+    return $self->{data}->write($self->{configFile});
 }
 
 sub list {
@@ -54,6 +54,8 @@ sub list {
             $self->{data}->[0]->{$key}{'description'}
         );
     }
+
+    return 1;
 }
 
 1;

@@ -17,7 +17,7 @@ sub execute {
     my $root = $self->get_root();
 
     my $repository = App::Ch::Repository->new($root);
-    $repository->list();
+    return $repository->list();
 }
 
 1;
