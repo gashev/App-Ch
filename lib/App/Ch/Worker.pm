@@ -17,7 +17,14 @@ sub new {
 sub run {
     my ( $self, $command ) = @_;
 
+    my $result = 1;
+
     eval { IPC::System::Simple::run($command); };
+    if ($@) {
+        $result = 0;
+    }
+
+    return $result;
 }
 
 
