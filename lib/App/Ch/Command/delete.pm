@@ -25,13 +25,12 @@ sub execute {
     my $root = $self->get_root();
     my $name = ${$args}[0];
 
-    my $result = 1;
     if ($self->worker()->run("rm -rf $root/$name")) {
         my $repository = App::Ch::Repository->new($root);
-        $result = $repository->delete($name);
+        return $repository->delete($name);
     }
 
-    return $result;
+    return 1;
 }
 
 1;
