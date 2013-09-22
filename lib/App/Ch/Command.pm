@@ -11,7 +11,13 @@ use App::Ch::Worker;
 # VERSION
 
 sub worker {
-    return App::Ch::Worker->new();
+    my $self = shift;
+
+    if (!defined $self->{worker}) {
+        $self->{worker} = App::Ch::Worker->new();
+    }
+
+    return $self->{worker};
 }
 
 sub get_root {
