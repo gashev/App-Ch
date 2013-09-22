@@ -54,15 +54,25 @@ sub execute {
     my $mirror       = $opt->mirror;
     my $message      = defined $opt->message ? $opt->message : '';
     my $name         = ${$args}[0];
+    my $result       = 1;
 
-    $self->worker()->run(
-        "/usr/sbin/debootstrap --arch $arch $distribution $root/$name $mirror");
-    $self->worker()->run("cp /etc/hosts $root/$name/etc/hosts");
-    $self->worker()->run("cp /etc/resolv.conf $root/$name/etc/resolv.conf");
-    $self->worker()->run("cp /proc/mounts $root/$name/etc/mtab");
+    my @commands     = (
+        "/usr/sbin/debootstrap --arch $arch $distribution $root/$name $mirror",
+        "cp /etc/hosts $root/$name/etc/hosts",
+        "cp /etc/resolv.conf $root/$name/etc/resolv.conf",
+        "cp /proc/mounts $root/$name/etc/mtab"
+    );
 
-    my $repository = App::Ch::Repository->new($root);
-    $repository->add($name, $distribution, $localtime, $message);
+    for my $command (@commands) {
+        $result &&= $self->worker()->run($command);
+    }
+
+    if ($result) {
+        my $repository = App::Ch::Repository->new($root);
+        return $repository->add($name, $distribution, $localtime, $message);
+    }
+
+    return 0;
 }
 
 1;
