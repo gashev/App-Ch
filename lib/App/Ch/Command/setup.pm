@@ -103,7 +103,7 @@ TARGET is the chroot name that you want to delete.
 
 =item  -a --arch
 
-Targer architecture. Default value is i386.
+Target architecture. Default value is i386.
 
 =item  -d --distribution
 

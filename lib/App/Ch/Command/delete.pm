@@ -52,7 +52,7 @@ App::Ch::Command::delete - permanently remove the chroot.
 =head1 DESCRIPTION
 
 This command permanently removes chroot from the repository. Only use this
-command after umount filesystems directly inside the chroot. For umount
+command after unmount filesystems directly inside the chroot. For unmount
 filesystems see stop command.
 
 =head1 COMMAND ARGUMENTS

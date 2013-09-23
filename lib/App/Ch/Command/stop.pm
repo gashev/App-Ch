@@ -1,4 +1,4 @@
-# ABSTRACT: umount the chroot.
+# ABSTRACT: unmount the chroot.
 package App::Ch::Command::stop;
 
 use strict;
@@ -39,7 +39,7 @@ __END__
 
 =head1 NAME
 
-App::Ch::Command::stop - umount the chroot.
+App::Ch::Command::stop - unmount the chroot.
 
 
 
@@ -49,7 +49,7 @@ App::Ch::Command::stop - umount the chroot.
 
 =head1 DESCRIPTION
 
-Umount chroot filesystems: /dev/pts, /proc, /sys.
+Unmount chroot filesystems: /dev/pts, /proc, /sys.
 
 =head1 COMMAND ARGUMENTS
 
