@@ -1,4 +1,4 @@
-# ABSTRACT: logs into the chroot
+# ABSTRACT: logs into the chroot.
 package App::Ch::Command::login;
 
 use strict;
@@ -33,6 +33,10 @@ __END__
 =pod
 
 =encoding utf-8
+
+=head1 NAME
+
+App::Ch::Command::login - logs into the chroots.
 
 =head1 SYNOPSIS
 

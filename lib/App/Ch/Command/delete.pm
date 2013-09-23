@@ -1,4 +1,4 @@
-# ABSTRACT: permanently remove the chroot
+# ABSTRACT: permanently remove the chroot.
 package App::Ch::Command::delete;
 
 use strict;
@@ -41,6 +41,10 @@ __END__
 
 =encoding utf-8
 
+=head1 NAME
+
+App::Ch::Command::delete - permanently remove the chroot.
+
 =head1 SYNOPSIS
 
   ch --root=CH_REPOSITORY_ROOT delete TARGET
@@ -48,8 +52,8 @@ __END__
 =head1 DESCRIPTION
 
 This command permanently removes chroot from the repository. Only use this
-after umount filesystems directly inside the chroot. For umount filesystems see
-stop command.
+command after umount filesystems directly inside the chroot. For umount
+filesystems see stop command.
 
 =head1 COMMAND ARGUMENTS
 

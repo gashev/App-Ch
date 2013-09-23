@@ -1,4 +1,4 @@
-# ABSTRACT: Managing a chroot configurations
+# ABSTRACT: managing a chroot configurations.
 package App::Ch::Repository;
 
 use strict;
@@ -69,7 +69,7 @@ __END__
 
 =head1 NAME
 
-App::Ch::Repository - Managing a chroot configurations.
+App::Ch::Repository - managing a chroot configurations.
 
 =head1 DESCRIPTION
 

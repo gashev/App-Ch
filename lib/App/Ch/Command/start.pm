@@ -1,4 +1,4 @@
-# ABSTRACT: mount the chroot
+# ABSTRACT: mount the chroot.
 package App::Ch::Command::start;
 
 use strict;
@@ -36,6 +36,10 @@ __END__
 =pod
 
 =encoding utf-8
+
+=head1 NAME
+
+App::Ch::Command::start - mount the chroot.
 
 =head1 SYNOPSIS
 

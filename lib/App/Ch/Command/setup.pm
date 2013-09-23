@@ -1,4 +1,4 @@
-# ABSTRACT: bootstrap a basic system
+# ABSTRACT: bootstrap a basic system.
 package App::Ch::Command::setup;
 
 use strict;
@@ -83,6 +83,10 @@ __END__
 
 =encoding utf-8
 
+=head1 NAME
+
+App::Ch::Command::setup - bootstrap a basic system.
+
 =head1 SYNOPSIS
 
   ch --root=CH_REPOSITORY_ROOT setup TARGET
@@ -106,12 +110,12 @@ Targer architecture. Default value is i386.
 Specifies the distribution used. The supported values are the ones debootstrap
 supports. Default value is sid.
 
-=item --mirror
+=item  --mirror
 
 Specifies  the  URL  of Debian mirror to be specified in sources.list inside
 the chroot. Default value is http://ftp.us.debian.org/debian.
 
-=item -m --message
+=item  -m --message
 
 Chroot description. Default value is empty message.
 

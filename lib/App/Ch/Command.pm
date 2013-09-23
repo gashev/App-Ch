@@ -1,4 +1,4 @@
-# ABSTRACT: Base class for ch commands
+# ABSTRACT: base class for ch commands.
 package App::Ch::Command;
 
 use strict;
@@ -49,7 +49,7 @@ __END__
 
 =head1 NAME
 
-App::Ch::Command - Base class for ch commands
+App::Ch::Command - base class for ch commands.
 
 =head1 AUTHOR
 

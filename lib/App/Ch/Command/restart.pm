@@ -1,4 +1,4 @@
-# ABSTRACT: remount the chroot
+# ABSTRACT: remount the chroot.
 package App::Ch::Command::restart;
 
 use strict;
@@ -36,6 +36,10 @@ __END__
 =pod
 
 =encoding utf-8
+
+=head1 NAME
+
+App::Ch::Command::restart - remount the chroot.
 
 =head1 SYNOPSIS
 

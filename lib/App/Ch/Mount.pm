@@ -1,4 +1,4 @@
-# ABSTRACT: Mount/umount filesystems for chroot
+# ABSTRACT: mount/umount filesystems for chroot.
 package App::Ch::Mount;
 
 use strict;

@@ -1,4 +1,4 @@
-# ABSTRACT: show the chroots
+# ABSTRACT: show the chroots.
 package App::Ch::Command::list;
 
 use strict;
@@ -27,6 +27,10 @@ __END__
 =pod
 
 =encoding utf-8
+
+=head1 NAME
+
+App::Ch::Command::list - show the chroots.
 
 =head1 SYNOPSIS
 
