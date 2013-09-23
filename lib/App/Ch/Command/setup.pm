@@ -76,3 +76,57 @@ sub execute {
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding utf-8
+
+=head1 SYNOPSIS
+
+  ch --root=CH_REPOSITORY_ROOT setup TARGET
+
+=head1 DESCRIPTION
+
+Setup command can be used to install Debian in a chroot environment.
+
+=head1 COMMAND ARGUMENTS
+
+TARGET is the chroot name that you want to delete.
+
+=over 4
+
+=item  -a --arch
+
+Targer architecture. Default value is i386.
+
+=item  -d --distribution
+
+Specifies the distribution used. The supported values are the ones debootstrap
+supports. Default value is sid.
+
+=item --mirror
+
+Specifies  the  URL  of Debian mirror to be specified in sources.list inside
+the chroot. Default value is http://ftp.us.debian.org/debian.
+
+=item -m --message
+
+Chroot description. Default value is empty message.
+
+=back
+
+=head1 AUTHOR
+
+Oleg Gashev <oleg@gashev.net>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Oleg Gashev.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
