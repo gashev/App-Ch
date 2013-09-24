@@ -18,5 +18,6 @@ Oleg
 Unmount
 chroots
 debootstrap
+namespace
 sid
 unmount
