@@ -10,3 +10,118 @@ use App::Ch;
 
 exit(App::Ch->run ? 0 : 1);
 
+__END__
+
+=pod
+
+=encoding utf-8
+
+=head1 NAME
+
+Ch - chroot handler.
+
+=head1 SYNOPSIS
+
+  ch --root=CH_REPOSITORY_ROOT COMMAND [args]
+
+=head1 DESCRIPTION
+
+Ch is an application for creating and managing a chroot environments.
+
+=head1 COMMANDS
+
+ch supports several commands that perform various operations on
+your chroots, or report information about your chroots.
+
+=over 4
+
+=item ch commands
+
+To get a listing of all the available commands.
+
+=item ch help COMMAND
+
+To get a brief summary about COMMAND.
+
+=item ch delete
+
+Permanently remove the chroot.
+
+=item ch list
+
+Display  the chroots list.
+
+=item ch login
+
+Logs into the chroot.
+
+=item ch restart
+
+Remount the chroot.
+
+=item ch setup
+
+Bootstrap a basic system.
+
+=item ch start
+
+Mount the chroot.
+
+=item ch stop
+
+Unmount the chroot.
+
+=back
+
+=head1 GLOBAL OPTIONS
+
+The following options are available for all commands.
+
+=over 4
+
+=item --root DIRECTORY
+
+=item -r DIRECTORY
+
+Specifies the root folder of your chroot repository.
+
+=back
+
+=head1 CONFIGURATION
+
+All information about available chroots stored to
+C<$CH_REPOSITORY_ROOT/.ch.yml> file. This file will be updated automatically on
+setup or delete chroot.
+
+=head1 ENVIRONMENT VARIABLES
+
+The following environment variables influence the behavior of ch.
+
+=over 4
+
+=item CH_REPOSITORY_ROOT
+
+Sets the default path of the chroot repository, if the C<--root> is not
+specified.
+
+=back
+
+=head1 PERLDOC
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc App::Ch
+
+=head1 AUTHOR
+
+Oleg Gashev <oleg@gashev.net>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Oleg Gashev.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
