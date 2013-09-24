@@ -60,7 +60,7 @@ ENVIRONMENT VARIABLES
 PERLDOC
     You can find documentation for this module with the perldoc command.
 
-        perldoc App::Ch
+        perldoc ch
 
 AUTHOR
     Oleg Gashev <oleg@gashev.net>
