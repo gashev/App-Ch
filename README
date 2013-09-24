@@ -1,0 +1,73 @@
+NAME
+    Ch - chroot handler.
+
+SYNOPSIS
+      ch --root=CH_REPOSITORY_ROOT COMMAND [args]
+
+DESCRIPTION
+    Ch is an application for creating and managing a chroot environments.
+
+COMMANDS
+    ch supports several commands that perform various operations on your
+    chroots, or report information about your chroots.
+
+    ch commands
+        To get a listing of all the available commands.
+
+    ch help COMMAND
+        To get a brief summary about COMMAND.
+
+    ch delete
+        Permanently remove the chroot.
+
+    ch list
+        Display the chroots list.
+
+    ch login
+        Logs into the chroot.
+
+    ch restart
+        Remount the chroot.
+
+    ch setup
+        Bootstrap a basic system.
+
+    ch start
+        Mount the chroot.
+
+    ch stop
+        Unmount the chroot.
+
+GLOBAL OPTIONS
+    The following options are available for all commands.
+
+    --root DIRECTORY
+    -r DIRECTORY
+        Specifies the root folder of your chroot repository.
+
+CONFIGURATION
+    All information about available chroots stored to
+    "$CH_REPOSITORY_ROOT/.ch.yml" file. This file will be updated
+    automatically on setup or delete chroot.
+
+ENVIRONMENT VARIABLES
+    The following environment variables influence the behavior of ch.
+
+    CH_REPOSITORY_ROOT
+        Sets the default path of the chroot repository, if the "--root" is
+        not specified.
+
+PERLDOC
+    You can find documentation for this module with the perldoc command.
+
+        perldoc App::Ch
+
+AUTHOR
+    Oleg Gashev <oleg@gashev.net>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Oleg Gashev.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
