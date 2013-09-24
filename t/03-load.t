@@ -17,4 +17,4 @@ BEGIN {
     use_ok('App::Ch::Worker');
 }
 
-diag("Testing App::Ch $App::Ch::VERSION"); 
+diag("Testing App::Ch $App::Ch::VERSION");
