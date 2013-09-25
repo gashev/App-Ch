@@ -25,7 +25,7 @@ sub opt_spec {
         ],
         [
             'distribution|d=s',
-            'distribution [sid|experimental|...]',
+            'distribution [stable|sid|...]',
             { default => 'sid' }
         ],
         [
