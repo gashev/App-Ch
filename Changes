@@ -1,3 +1,11 @@
+0.2, 2013-10-11
+
+    - Fixed #1 Can't call method "write" on unblessed reference at
+    /usr/local/share/perl/5.14.2/App/Ch/Repository.pm line 35.
+
+    - Fixed #2 If debootstrap does not exist, setup command finished without
+    error messages.
+
 0.1, 2013-09-24
 
-    Initial release.
+    - Initial release.
