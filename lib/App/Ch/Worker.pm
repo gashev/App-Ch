@@ -5,8 +5,6 @@ use strict;
 use warnings;
 use utf8;
 
-use IPC::System::Simple;
-
 # VERSION
 
 sub new {
@@ -18,9 +16,7 @@ sub new {
 sub run {
     my ( $self, $command ) = @_;
 
-    eval { IPC::System::Simple::run($command); };
-
-    return ($@ ? 0 : 1);
+    return (system($command) == 0);
 }
 
 1;
