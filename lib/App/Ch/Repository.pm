@@ -14,10 +14,15 @@ sub new {
 
     my $configFile = "$root/.ch.yml";
 
+    my $data = YAML::Tiny->read($configFile);
+    if (!defined($data)) {
+        $data = YAML::Tiny->new();
+    }
+
     my $self = {
         root       => $root,
         configFile => $configFile,
-        data       => YAML::Tiny->read($configFile),
+        data       => $data
     };
 
     bless $self, $class;
